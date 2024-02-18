@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pico Web Server</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Raspberry Pi Pico Web Server</h1>
+        <h2>Led Control</h2>
+        <form action="./lighton">
+            <input type="submit" value="Light on" />
+        </form>
+        <br>
+        <form action="./lightoff">
+            <input type="submit" value="Light off" />
+        </form>
+        <p>LED state: {state}</p>
+        <h2>BME280 Sensor Readings</h1>
+        <p>Temperature: {temperature} &#176C</p>
+        <p>Humidity: {humidity} %</p>
+        <p>Pressure: {pressure} hPa</p>
+        <form action="./">
+            <input type="submit" value="Refresh" />
+        </form>
+    </body>
+</html>
