@@ -1,4 +1,4 @@
-# forked from https://github.com/T-622/RPI-PICO-I2C-LCD/tree/main
+# forked from https://github.com/T-622/RPI-PICO-I2C-LCD/
 import time
 
 class LcdApi:
