@@ -21,7 +21,7 @@ i2c = SoftI2C(sda=Pin(4), scl=Pin(5), freq=400000)
 lcd = I2cLcd(i2c, I2C_ADDR, I2C_NUM_ROWS, I2C_NUM_COLS)
 
 # Byte array for thermometer icon
-thermometer = bytearray([0x04, 0x0A, 0x0A, 0x0A, 0x0A, 0x1B, 0x1F, 0x0E ])
+thermometer = bytearray([0x04, 0x0A, 0x0A, 0x0A, 0x0A, 0x1B, 0x1F, 0x0E])
 lcd.custom_char (0, thermometer)
 
 # Byte array for umbrella icon
@@ -53,7 +53,7 @@ try:
         lcd.putstr(tempC_lcd)
         
         # Display humidity
-        lcd.move_to(0,1)
+        lcd.move_to(0, 1)
         lcd.putchar(chr(1))
         hum_lcd = "Hum: " + str(hum) + "%"
         lcd.putstr(hum_lcd)
