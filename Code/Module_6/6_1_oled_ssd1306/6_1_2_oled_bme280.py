@@ -15,7 +15,7 @@ oled_width = 128
 oled_height = 64
 
 # Initialize the OLED display
-oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c, addr=0x3c)
+oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c_oled, addr=0x3c)
 
 while True:
     try:
