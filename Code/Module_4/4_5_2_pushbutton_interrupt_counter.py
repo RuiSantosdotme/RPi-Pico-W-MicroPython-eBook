@@ -4,7 +4,7 @@
 from machine import Pin
 
 button = Pin(21, Pin.IN, Pin.PULL_DOWN)
-counter = 0; # Initialize the button press count
+counter = 0  # Initialize the button press count
 
 def button_pressed(pin):
     global counter # Declare variable as global
