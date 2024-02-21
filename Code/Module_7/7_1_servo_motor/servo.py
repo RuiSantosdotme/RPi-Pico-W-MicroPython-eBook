@@ -1,3 +1,4 @@
+# Modified, but based on this library example: https://github.com/nobleBBK/odda_atolye/blob/main/servo.py
 from machine import Pin, PWM
 
 class Servo:
