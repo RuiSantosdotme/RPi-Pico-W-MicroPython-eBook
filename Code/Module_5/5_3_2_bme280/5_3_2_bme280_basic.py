@@ -11,7 +11,7 @@ i2c = I2C(id=0, scl=Pin(5), sda=Pin(4), freq=10000)
 while True:
     try:
         # Initialize BME280 sensor
-        bme = BME280.BME280(i2c=i2c)
+        bme = BME280.BME280(i2c=i2c, addr=0x76)
         
         # Read sensor data
         temp_c = bme.temperature
