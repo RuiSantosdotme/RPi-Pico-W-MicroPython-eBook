@@ -1,3 +1,4 @@
+# forked from: https://github.com/micropython/micropython-lib/tree/master/micropython/umqtt.robust
 import utime
 from . import simple
 
