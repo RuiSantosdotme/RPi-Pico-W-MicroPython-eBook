@@ -20,7 +20,7 @@ oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c_oled, addr=0x3c)
 while True:
     try:
         # Initialize BME280 sensor
-        bme = BME280.BME280(i2c=i2c_bme280)
+        bme = BME280.BME280(i2c=i2c_bme280, addr=0x76)
 
         # Clear the OLED display
         oled.fill(0)
