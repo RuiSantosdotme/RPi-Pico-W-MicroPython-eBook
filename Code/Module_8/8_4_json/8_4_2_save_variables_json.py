@@ -11,7 +11,7 @@ FILE_PATH = 'data.json'
 # Intialize the LED and the button
 led = Pin(20, Pin.OUT)
 button = Pin(21, Pin.IN, Pin.PULL_DOWN)
-counter = 0; # Initialize the button press count
+counter = 0  # Initialize the button press count
 
 # Function to save data to a JSON file
 def save_data(led_value, button_counter):
