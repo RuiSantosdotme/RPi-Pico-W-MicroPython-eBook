@@ -3,11 +3,11 @@
 
 import network
 
-# Init WiFi interface
+# Init Wi-Fi interface
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 
-# Scan for WiFi networks
+# Scan for Wi-Fi networks
 networks = wlan.scan()
 
 # Print Wi-Fi networks
