@@ -5,7 +5,7 @@ from servo import Servo
 from time import sleep
 
 # Create a Servo object on pin 0
-servo=Servo(pin=0)
+servo = Servo(pin=0)
 
 try:
     while True:
