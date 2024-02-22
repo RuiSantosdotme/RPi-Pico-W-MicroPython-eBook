@@ -13,7 +13,7 @@ enable = PWM(Pin(2), frequency)
 
 dc_motor = DCMotor(pin1, pin2, enable)
 
-#Set min duty cycle (15000) and max duty cycle (65535) 
+# Set min duty cycle (15000) and max duty cycle (65535) 
 #dc_motor = DCMotor(pin1, pin2, enable, 15000, 65535)
 
 try:
