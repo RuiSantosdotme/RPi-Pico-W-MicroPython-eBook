@@ -4,7 +4,7 @@
 import os
 
 # Create a new file called testFile.txt
-file = open ('testFile.txt', 'w')
+file = open('testFile.txt', 'w')
 
 # List all files in the filesystem
 print(os.listdir())
