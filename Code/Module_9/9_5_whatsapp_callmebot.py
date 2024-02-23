@@ -37,7 +37,6 @@ def init_wifi(ssid, password):
         print('IP address:', network_info[0])
         return True
 
-
 def send_message(phone_number, api_key, message):
     # Set the URL
     url = f'https://api.callmebot.com/whatsapp.php?phone={phone_number}&text={message}&apikey={api_key}'
@@ -50,7 +49,6 @@ def send_message(phone_number, api_key, message):
     else:
         print('Error')
         print(response.text)
-
 try: 
     # Connect to WiFi
     if init_wifi(ssid, password):
