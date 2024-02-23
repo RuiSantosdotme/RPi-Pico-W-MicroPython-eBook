@@ -6,7 +6,6 @@ import time
 days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 while True:
-
     # Get the current time in seconds since the epoch
     current_time = time.time()
     print('Epoch Time:', current_time)
