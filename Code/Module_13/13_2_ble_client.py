@@ -35,7 +35,6 @@ async def find_temp_sensor():
                 return result.device
     return None
 
-
 async def main():
     while True:
         device = await find_temp_sensor()
