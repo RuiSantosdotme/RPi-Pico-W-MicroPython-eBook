@@ -48,7 +48,6 @@ def init_wifi(ssid, password):
         print('IP address:', network_info[0])
         return True
 
-
 if init_wifi(ssid, password):
     # Set up socket and start listening
     addr = socket.getaddrinfo('0.0.0.0', 80)[0][-1]
@@ -57,7 +56,6 @@ if init_wifi(ssid, password):
     s.bind(addr)
     s.listen()
     print('Listening on', addr)
-
 
 # Main loop to listen for connections
 while True:
