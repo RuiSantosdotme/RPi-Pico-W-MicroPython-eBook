@@ -16,7 +16,8 @@ country_code ='REPLACE_WITH_YOUR_COUNTRY_CODE'
 # Request URL
 url = f'https://api.openweathermap.org/data/2.5/weather?q={city},{country_code}&appid={api_key}'
 
-def init_wifi(ssid, password):# Init Wi-Fi Interface
+# Init Wi-Fi Interface
+def init_wifi(ssid, password):
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     # Connect to your network
