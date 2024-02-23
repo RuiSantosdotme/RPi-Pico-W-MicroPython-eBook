@@ -14,7 +14,8 @@ timezone = 'Europe/Lisbon'
 
 url = f'http://worldtimeapi.org/api/timezone/{timezone}'
 
-def init_wifi(ssid, password):# Init Wi-Fi Interface
+# Init Wi-Fi Interface
+def init_wifi(ssid, password):
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     # Connect to your network
@@ -36,7 +37,6 @@ def init_wifi(ssid, password):# Init Wi-Fi Interface
         print('IP address:', network_info[0])
         return True
           
-    
 if init_wifi(ssid, password):
     while True:
         try:
