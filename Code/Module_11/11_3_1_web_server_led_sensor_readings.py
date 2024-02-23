@@ -85,7 +85,6 @@ def init_wifi(ssid, password):
         print('IP address:', network_info[0])
         return True
 
-
 if not init_wifi(wifi_ssid, wifi_password):
     print("Exiting program.")
 else:
