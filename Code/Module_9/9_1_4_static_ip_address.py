@@ -30,7 +30,6 @@ while connection_timeout > 0:
     print('Waiting for Wi-Fi connection...')
     time.sleep(1)
 
-
 # Set static IP address
 wlan.ifconfig((static_ip, subnet_mask, gateway_ip, dns_server))
 
