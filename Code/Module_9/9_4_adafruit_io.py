@@ -24,7 +24,8 @@ url = f"https://io.adafruit.com/api/v2/{username}/feeds/{feed_name}/data/last"
 # Define the onboard LED pin
 led_pin = Pin(20, Pin.OUT)
 
-def init_wifi(ssid, password):# Init Wi-Fi Interface
+# Init Wi-Fi Interface
+def init_wifi(ssid, password):
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     # Connect to your network
