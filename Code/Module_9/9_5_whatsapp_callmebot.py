@@ -14,7 +14,8 @@ phone_number = 'YOUR_PHONE_NUMER_INTERNATIONAL_FORMAT'
 #Your callmebot API key
 api_key = 'CALLMEBOT_API_KEY'
 
-def init_wifi(ssid, password):# Init Wi-Fi Interface
+# Init Wi-Fi Interface
+def init_wifi(ssid, password):
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     # Connect to your network
