@@ -25,7 +25,8 @@ password = 'REPLACE_WITH_YOUR_PASSWORD'
 timezone_offset = 2
 timezone_offset_s = timezone_offset*3600
 
-def init_wifi(ssid, password):# Init Wi-Fi Interface
+# Init Wi-Fi Interface
+def init_wifi(ssid, password):
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     # Connect to your network
