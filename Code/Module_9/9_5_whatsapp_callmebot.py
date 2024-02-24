@@ -55,7 +55,8 @@ try:
     # Connect to WiFi
     if init_wifi(ssid, password):
         # Send message to WhatsApp "Hello"
-        message = 'Hello%20from%20the%20Raspberry%20Pi%20Pico%21' #YOUR MESSAGE HERE (URL ENCODED)https://www.urlencoder.io/ 
+        # ENTER YOUR MESSAGE BELOW (URL ENCODED) https://www.urlencoder.io/
+        message = 'Hello%20from%20the%20Raspberry%20Pi%20Pico%21' 
         send_message(phone_number, api_key, message)
 except Exception as e:
     print('Error:', e)
