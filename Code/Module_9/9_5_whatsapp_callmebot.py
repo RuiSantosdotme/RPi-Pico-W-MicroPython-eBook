@@ -9,9 +9,11 @@ from time import sleep
 ssid = 'REPLACE_WITH_YOUR_SSID'
 password = 'REPLACE_WITH_YOUR_PASSWORD'
 
-#Your phone number in international format
+# Your phone number in international format (including the + sign)
 phone_number = 'YOUR_PHONE_NUMER_INTERNATIONAL_FORMAT'
-#Your callmebot API key
+# Example: phone_number = '+351912345678'
+
+# Your callmebot API key
 api_key = 'CALLMEBOT_API_KEY'
 
 # Init Wi-Fi Interface
