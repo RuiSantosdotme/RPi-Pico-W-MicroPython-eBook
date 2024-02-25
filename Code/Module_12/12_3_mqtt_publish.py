@@ -27,7 +27,7 @@ MQTT_SSL_PARAMS = {'server_hostname': MQTT_SERVER}
 i2c = I2C(id=0, scl=Pin(5), sda=Pin(4), freq=10000)
 
 # Initialize BME280 sensor
-bme = BME280.BME280(i2c=i2c)
+bme = BME280.BME280(i2c=i2c, addr=0x76)
 
 def get_sensor_readings():
     temp = bme.temperature[:-1]
