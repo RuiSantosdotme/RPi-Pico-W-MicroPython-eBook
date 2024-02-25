@@ -17,7 +17,7 @@ state = 'OFF'
 
 # Initialize I2C communication
 i2c = I2C(id=0, scl=Pin(5), sda=Pin(4), freq=10000)
-bme = BME280.BME280(i2c=i2c)
+bme = BME280.BME280(i2c=i2c, addr=0x76)
 
 # Get sensor readings
 def get_readings():
