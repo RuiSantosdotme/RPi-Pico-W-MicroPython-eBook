@@ -15,7 +15,7 @@ rtc = urtc.DS1307(i2c_rtc)
 # Initialize OLED 
 oled_width = 128
 oled_height = 64
-i2c_oled = SoftI2C(scl=Pin(0), sda=Pin(1))
+i2c_oled = SoftI2C(scl=Pin(1), sda=Pin(0))
 oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c_oled)
 
 while True:
