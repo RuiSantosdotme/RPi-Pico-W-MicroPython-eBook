@@ -24,7 +24,7 @@ days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturda
 ssid = 'REPLACE_WITH_YOUR_SSID'
 password = 'REPLACE_WITH_YOUR_PASSWORD'
 
-# Your timezone. List of timezones here: https://worldtimeapi.org/timezones
+# Your time zone. List of time zones here: https://worldtimeapi.org/timezones
 timezone = 'Asia/Dubai'
 
 # API endpoint
