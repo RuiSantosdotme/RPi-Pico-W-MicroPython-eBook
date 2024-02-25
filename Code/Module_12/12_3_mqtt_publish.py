@@ -77,7 +77,6 @@ def connect_mqtt():
         print('Error connecting to MQTT:', e)
         raise  # Re-raise the exception to see the full traceback
 
-
 def publish_mqtt(topic, value):
     client.publish(topic, value)
     print(topic)
