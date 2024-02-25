@@ -16,7 +16,7 @@ rtc = urtc.DS1307(i2c)
 #initial_time = (2024, 1, 30, 1, 12, 30, 0, 0)
 
 # Or get the local time from the system
-initial_time_tuple = time.localtime() #tuple (microPython)
+initial_time_tuple = time.localtime() # tuple (MicroPython)
 initial_time_seconds = time.mktime(initial_time_tuple) # local time in seconds
 
 # Convert to tuple compatible with the library
