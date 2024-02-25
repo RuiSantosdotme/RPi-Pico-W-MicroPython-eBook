@@ -12,7 +12,7 @@ i2c = I2C(0, scl=Pin(5), sda=Pin(4))
 rtc = urtc.DS1307(i2c)
 
 # Set the current time using a specified time tuple
-# Time tupple: (year, month, day, day of week, hour, minute, seconds, milliseconds)
+# Time tuple: (year, month, day, day of week, hour, minute, seconds, milliseconds)
 #initial_time = (2024, 1, 30, 1, 12, 30, 0, 0)
 
 # Or get the local time from the system
