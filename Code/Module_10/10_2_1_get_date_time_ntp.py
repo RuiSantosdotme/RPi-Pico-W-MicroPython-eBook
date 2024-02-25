@@ -21,7 +21,7 @@ days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturda
 ssid = 'REPLACE_WITH_YOUR_SSID'
 password = 'REPLACE_WITH_YOUR_PASSWORD'
 
-# Adjust timezone offset
+# Adjust time zone offset
 timezone_offset = 2
 timezone_offset_s = timezone_offset*3600
 
@@ -58,7 +58,7 @@ if init_wifi(ssid, password):
             current_time = time.time()
             print('Epoch Time:', current_time)
             
-            # Adjust timezone
+            # Adjust time zone
             current_time = current_time + timezone_offset_s
 
             # Convert the time to a tuple representing the date and time
