@@ -73,8 +73,7 @@ def connect_mqtt():
                             password=MQTT_PASSWORD,
                             keepalive=MQTT_KEEPALIVE,
                             ssl=MQTT_SSL,
-                            ssl_params=MQTT_SSL_PARAMS
-                            )
+                            ssl_params=MQTT_SSL_PARAMS)
         client.connect()
         return client
     except Exception as e:
