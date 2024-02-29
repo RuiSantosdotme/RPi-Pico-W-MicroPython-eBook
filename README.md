@@ -1,3 +1,3 @@
 # Learn Raspberry Pi Pico/Pico W with MicroPython
 
-Complete project details at https://RandomNerdTutorials.com/raspberry-pi-pico-w-micropython-ebook/
+More information about the eBook: https://RandomNerdTutorials.com/raspberry-pi-pico-w-micropython-ebook/
