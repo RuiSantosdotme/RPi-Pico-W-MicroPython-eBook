@@ -24,6 +24,9 @@ sensor_address = {
 }
 
 while True:
+    # Initiate temperature conversion for all sensors
+    ds_sensor.convert_temp()
+    time.sleep_ms(750)  # Wait for the conversion to complete
     for sensor_name, address in sensor_address.items():
         # Print the sensor name
         print("Sensor Name:", sensor_name)
