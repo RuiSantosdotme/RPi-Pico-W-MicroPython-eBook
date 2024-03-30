@@ -98,7 +98,7 @@ try:
             publish_mqtt(MQTT_TOPIC_HUMIDITY, str(humidity))
 
             # Delay 10 seconds
-            sleep(2)
+            sleep(10)
 
 except Exception as e:
     print('Error:', e)
