@@ -15,7 +15,7 @@ class DCMotor:
         self.pin1.value(1)
         self.pin2.value(0)
 
-    def backward(self, speed):
+    def backwards(self, speed):
         self.speed = speed
         self.enable_pin.duty_u16(self.duty_cycle(self.speed))
         self.pin1.value(0)
