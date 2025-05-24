@@ -9,10 +9,10 @@ import time
 ssid = 'REPLACE_WITH_YOUR_SSID'
 password = 'REPLACE_WITH_YOUR_PASSWORD'
 
-# Your time zone. List of time zones here: https://worldtimeapi.org/timezones
+# Your time zone. List of time zones here: https://timeapi.io/api/TimeZone/AvailableTimeZones
 timezone = 'Europe/Lisbon'
 
-url = f'http://worldtimeapi.org/api/timezone/{timezone}'
+url = f'https://timeapi.io/api/Time/current/zone?timeZone={timezone}'
 
 # Init Wi-Fi Interface
 def init_wifi(ssid, password):
@@ -36,19 +36,21 @@ def init_wifi(ssid, password):
         network_info = wlan.ifconfig()
         print('IP address:', network_info[0])
         return True
-          
+
 if init_wifi(ssid, password):
-    while True:
-        try:
-            response = requests.get(url)
-            print('Response code:', response.status_code)
-            if (response.status_code == 200):
-                time_json= response.json()
-                print('Response:', time_json)
-                date_time = time_json['datetime']
-                print('Date and Time:', date_time)
+    try:
+        response = requests.get(url)
+        print('Response code:', response.status_code)
+        if response.status_code == 200:
+            time_json = response.json()
+            print('Response:', time_json)
+            date_time = f"{time_json['date']} {time_json['time']}"
+            print('Date and Time:', date_time)
+        else:
+            print('Failed to fetch time data')
             
-        except Exception as e:
-            print('Error occurred:', e)
-            time.sleep(2)
-            continue
+    except Exception as e:
+        print('Error occurred:', e)
+        time.sleep(2)
+else:
+    print('Error connecting to Wi-Fi')
