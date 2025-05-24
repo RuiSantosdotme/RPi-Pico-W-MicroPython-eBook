@@ -9,17 +9,18 @@ from machine import RTC, Timer
 # Create a clock to keep track of time
 rtc = machine.RTC()
 
-days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 
+                'Friday', 'Saturday', 'Sunday']
 
 # Wi-Fi credentials
 ssid = 'REPLACE_WITH_YOUR_SSID'
 password = 'REPLACE_WITH_YOUR_PASSWORD'
 
-# Your time zone. List of time zones here: https://worldtimeapi.org/timezones
-timezone = 'Asia/Dubai'
+# Your time zone. List of time zones here: https://timeapi.io/api/TimeZone/AvailableTimeZones
+timezone = 'Europe/Lisbon'
 
 # API endpoint
-url = f'http://worldtimeapi.org/api/timezone/{timezone}'
+url = f'https://timeapi.io/api/Time/current/zone?timeZone={timezone}'
 
 # Init Wi-Fi Interface
 def init_wifi(ssid, password):
@@ -43,7 +44,7 @@ def init_wifi(ssid, password):
         network_info = wlan.ifconfig()
         print('IP address:', network_info[0])
         return True
-
+    
 # Make request to get the time
 def get_time():
     try:
@@ -52,25 +53,14 @@ def get_time():
         print('Response code:', response.status_code)
         if (response.status_code == 200):
             time_json= response.json()
-            date_time = time_json['datetime']
             
-            # Split the datetime string into date and time parts using 'T' as the separator
-            date_str, time_str = date_time.split('T')
-            print('Date:', date_str)
-            print('Time:', time_str)
-
-            # Extract year, month, and day from the date part
-            year, month, day = map(int, date_str.split('-'))
-            
-            # Extract hour, minutes, seconds
-            current_time = time_str[:8]
-            hour, minute, second = map(int, current_time.split(':'))
-            
-            # Get current day of week
-            day_of_week = time_json['day_of_week']
-            
-            #Get day of the year
-            year_day = time_json['day_of_year']
+            year = time_json['year']
+            month = time_json['month']
+            day = time_json['day']
+            day_of_week = time_json['dayOfWeek']
+            hour = time_json['hour']
+            minute = time_json['minute']
+            second = time_json['seconds']
             
             # Put together the time tuple
             time_tuple =(year, month, day, day_of_week, hour, minute, second, 0)
@@ -104,8 +94,10 @@ if init_wifi(ssid, password):
             local_time_tuple = time.localtime(current_time)
             print(local_time_tuple)
             # Format the date and time as strings
-            formatted_date = '{:02d}-{:02d}-{:04d}'.format(local_time_tuple[2], local_time_tuple[1], local_time_tuple[0])
-            formatted_time = '{:02d}:{:02d}:{:02d}'.format(local_time_tuple[3], local_time_tuple[4], local_time_tuple[5])
+            formatted_date = '{:02d}-{:02d}-{:04d}'.format(local_time_tuple[2],
+                             local_time_tuple[1], local_time_tuple[0])
+            formatted_time = '{:02d}:{:02d}:{:02d}'.format(local_time_tuple[3],
+                             local_time_tuple[4], local_time_tuple[5])
             formatted_day_week = days_of_week[local_time_tuple[6]]
             
             print(formatted_day_week)
